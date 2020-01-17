@@ -17,7 +17,7 @@ import javafx.util.Duration;
 public class BouncingBall extends Application
 {
     @Override
-    public void start(Stage stage) throws Exception
+    public void start(Stage stage)
     {
         Pane canvas = new Pane();
         Scene scene = new Scene(canvas, 600, 600);
