@@ -7,9 +7,7 @@ import javafx.geometry.Bounds;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Sphere;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -31,7 +29,7 @@ public class BouncingBall extends Application
         stage.setScene(scene);
         stage.show();
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(10),
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(25),
                 new EventHandler<>()
                 {
                     double dx = 7; //Sets step on x (or velocity).
