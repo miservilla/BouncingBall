@@ -35,7 +35,7 @@ public class BouncingBall extends Application
         stage.setScene(scene);
         stage.show();
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(20),
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(10),
                 new EventHandler<ActionEvent>()
                 {
                     double dx = 7; //Sets step on x (or velocity).
@@ -50,14 +50,14 @@ public class BouncingBall extends Application
 
                         Bounds bounds = canvas.getBoundsInLocal();
 
-                        if(sphere.getLayoutX() == (bounds.getMinX() + sphere.getRadius()) ||
+                        if(sphere.getLayoutX() <= (bounds.getMinX() + sphere.getRadius()) ||
                                sphere.getLayoutX() >= (bounds.getMaxX() - sphere.getRadius()))
                         {
                             dx = -dx;
                         }
 
-                        if (sphere.getLayoutY() == (bounds.getMinY() + sphere.getRadius()) ||
-                                (sphere.getLayoutY() == (bounds.getMinY() + sphere.getRadius())))
+                        if (sphere.getLayoutY() >= (bounds.getMaxY() - sphere.getRadius()) ||
+                                (sphere.getLayoutY() <= (bounds.getMinY() + sphere.getRadius())))
                         {
                             dy = -dy;
                         }
